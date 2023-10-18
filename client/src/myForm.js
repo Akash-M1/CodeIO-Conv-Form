@@ -120,7 +120,8 @@ export default class MyForm extends React.Component {
     });
     const response1 = await response.json();
     console.log("Formdata, obj:", response1);
-    this.cf.addRobotChatResponse("You are done. Check you mail for the whatsapp group link and Join!!.")
+    this.cf.addRobotChatResponse(`You are done.\n
+Check you mail for the confirmation and Join the WhatsApp group</a>`);
   }
   
   render() {
