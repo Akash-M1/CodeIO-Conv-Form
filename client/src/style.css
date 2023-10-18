@@ -1,0 +1,24 @@
+html, body {
+    height: 90%;
+    width: 96%;
+    background: #eee;
+    margin: 10px auto;
+  }
+
+  @media (max-width: 768px) {
+    /* Adjust the form container for smaller screens */
+    .cf-form {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* Style the form fields for mobile */
+    .cf-input-wrapper {
+      margin-bottom: 10px;
+    }
+  
+    /* Style the submit button */
+    .cf-submit-button {
+      width: 100%;
+    }
+  }
