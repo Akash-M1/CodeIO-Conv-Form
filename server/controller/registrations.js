@@ -4,9 +4,7 @@ const queue = require('../config/kue');
 const registerWorker = require("../workers/registermail_worker");
 
 exports.getRegistrations = (req,res)=>{
-    return res.render('index',{
-        title:"Register | CodeIO"
-    });
+    return res.send("Hello Everyone");
 }
 
 
