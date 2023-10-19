@@ -5,7 +5,7 @@ exports.newRegisterMail = (data)=>{
     nodeMailer.transporter.sendMail({
         from:'codeio@bmsce.ac.in',
         to:data.email,
-        subject:"Thank You for Registering with <b>CodeIO</b>",
+        subject:"Thank You for Registering with CodeIO",
         html:htmlStr
     },(err,info)=>{
         if(err){

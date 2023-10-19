@@ -10,15 +10,15 @@ export default class MyForm extends React.Component {
         'type': 'radio',
         'name': 'roles',
         'cf-questions': `<b>Recruitment process:\n</b>
-        <b>Technical</b> team: general workshop + technical workshop + interview\n
-        <b>Design/Creative</b> team: general workshop (optional) + task + interview\n
-        <b>Technical Aspirant</b> team: general workshop + interview\n
+        <b>Technical team</b>: general workshop + technical workshop + interview\n
+        <b>Design/Creative team</b>: general workshop (optional) + task + interview\n
+        <b>Technical Aspirant team</b>: general workshop + interview\n
         
 <b>Role Summary:\n</b>
-        <b>Technical</b> team:I want to join the technical team, and I have technical skills.\n
-        <b>Design/Creative</b> team:I want to join the design/creative team.\n
-        <b>Technical Aspirant</b> team: I want to join the technical team eventually, but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem)</b>.\n`,
-        'cf-label': '<b>Technical</b> team',
+        <b>Technical team</b>: I want to join the technical team, and I have technical skills.\n
+        <b>Design/Creative team</b>: I want to join the design/creative team.\n
+        <b>Technical Aspirant team</b>: I want to join the technical team eventually,but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem)</b>.\n`,
+        'cf-label': '<b>Technical team</b>',
         'value': 'Technical'
       },
       {
@@ -26,31 +26,31 @@ export default class MyForm extends React.Component {
         'type': 'radio',
         'name': 'roles',
         'cf-questions': `<b>Recruitment process:\n</b>
-        <b>Technical</b> team: general workshop + technical workshop + interview\n
-        <b>Design/Creative</b> team: general workshop (optional) + task + interview\n
-        <b>Technical Aspirant</b> team: general workshop + interview\n
+        <b>Technical team</b>: general workshop + technical workshop + interview\n
+        <b>Design/Creative team</b>: general workshop (optional) + task + interview\n
+        <b>Technical Aspirant team</b>: general workshop + interview\n
         
 <b>Role Summary:\n</b>
-        <b>Technical</b> team:I want to join the technical team, and I have technical skills.\n
-        <b>Design/Creative</b> team:I want to join the design/creative team\n.
-        <b>Technical Aspirant</b> team: I want to join the technical team eventually, but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem)</b>.\n`,
+        <b>Technical team</b>: I want to join the technical team, and I have technical skills.\n
+        <b>Design/Creative team</b>: I want to join the design/creative team\n.
+        <b>Technical Aspirant team</b>: I want to join the technical team eventually, but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem)</b>.\n`,
         'cf-label': "<b>Technical Aspirant</b>",
-        'value': 'Technical Aspirantl'
+        'value': 'Technical Aspirant'
       },
       {
         'tag': 'input',
         'type': 'radio',
         'name': 'roles',
         'cf-questions': `<b>Recruitment process:\n</b>
-        <b>Technical</b> team: general workshop + technical workshop + interview\n
-        <b>Design/Creative</b> team: general workshop (optional) + task + interview\n
-        <b>Technical Aspirant</b> team: general workshop + interview\n
+        <b>Technical team</b>: general workshop + technical workshop + interview\n
+        <b>Design/Creative team</b>: general workshop (optional) + task + interview\n
+        <b>Technical Aspirant team</b>: general workshop + interview\n
         
 <b>Role Summary:\n</b>
-        <b>Technical</b> team:I want to join the technical team, and I have technical skills.\n
-        <b>Design/Creative</b> team:I want to join the design/creative team.\n
-        <b>Technical Aspirant</b> team: I want to join the technical team eventually, but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem).</b>\n`,
-        'cf-label': "<b>Design/Creative</b> team",
+        <b>Technical team</b>: I want to join the technical team, and I have technical skills.\n
+        <b>Design/Creative team</b>: I want to join the design/creative team.\n
+        <b>Technical Aspirant team</b>: I want to join the technical team eventually, but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem).</b>\n`,
+        'cf-label': "<b>Design/Creative team</b>",
         'value': 'Design'
       },
       {
@@ -110,7 +110,7 @@ export default class MyForm extends React.Component {
   
   async submitCallback() {
     var formDataSerialized = this.cf.getFormData(true);
-    const response = await fetch("http://localhost:8855/register", {
+    const response = await fetch("https://api.codeio.club/register", {
       method: "POST", 
       //mode: "cors", // no-cors, *cors, same-origin
       headers: {
@@ -121,7 +121,7 @@ export default class MyForm extends React.Component {
     const response1 = await response.json();
     console.log("Formdata, obj:", response1);
     this.cf.addRobotChatResponse(`You are done.\n
-Check you mail for the confirmation and Join the WhatsApp group</a>`);
+Check your mail for the confirmation and Join the WhatsApp group</a>`);
   }
   
   render() {
