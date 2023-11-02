@@ -8,8 +8,8 @@ const transporter = nodemailer.createTransport({
     port:587,
     secure:false,
     auth:{
-        user:'codeio@bmsce.ac.in',
-        pass:"kpfcplxofrrsyaga"
+        user:process.env.google_SMTP_user,
+        pass:process.env.google_SMTP_pass
     }
 });
 
