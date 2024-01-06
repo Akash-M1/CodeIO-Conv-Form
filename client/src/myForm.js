@@ -132,7 +132,7 @@ export default class MyForm extends React.Component {
   
   async submitCallback() {
     var formDataSerialized = this.cf.getFormData(true);
-    const response = await fetch("http://localhost:8855/register", {
+    const response = await fetch("https://api.codeio.club/register", {
       method: "POST", 
       //mode: "cors", // no-cors, *cors, same-origin
       headers: {
