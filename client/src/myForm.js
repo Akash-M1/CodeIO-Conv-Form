@@ -9,49 +9,71 @@ export default class MyForm extends React.Component {
         'tag': 'input',
         'type': 'radio',
         'name': 'roles',
-        'cf-questions': `<b>Recruitment process:\n</b>
-        <b>Technical team</b>: general workshop + technical workshop + interview\n
-        <b>Design/Creative team</b>: general workshop (optional) + task + interview\n
-        <b>Technical Aspirant team</b>: general workshop + interview\n
-        
+        'cf-questions': `
 <b>Role Summary:\n</b>
-        <b>Technical team</b>: I want to join the technical team, and I have technical skills.\n
-        <b>Design/Creative team</b>: I want to join the design/creative team.\n
-        <b>Technical Aspirant team</b>: I want to join the technical team eventually,but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem)</b>.\n`,
-        'cf-label': '<b>Technical team</b>',
-        'value': 'Technical'
+        <b>President</b>: Provide overall leadership and direction to the technical club, coordinating activities and fostering an inclusive environment.\n
+        <b>Head of Development</b>: Lead software projects, mentor members in programming skills, and stay updated on the latest technologies.\n
+        <b>Head of Competitive Coding</b>:Organize coding events, train members in problem-solving, and represent the club in coding competitions.\n
+        <b>Head of Research and Development</b>: Promote a culture of research, encourage innovative projects, and collaborate with faculty and industry experts.\n
+        <b>Secretary</b>: As the Secretary, you will be responsible for managing documentation and finances, ensuring the smooth administrative functioning of our technical club.\n`,
+        'cf-label': '<b>President</b>',
+        'value': 'President'
       },
       {
         'tag': 'input',
         'type': 'radio',
         'name': 'roles',
-        'cf-questions': `<b>Recruitment process:\n</b>
-        <b>Technical team</b>: general workshop + technical workshop + interview\n
-        <b>Design/Creative team</b>: general workshop (optional) + task + interview\n
-        <b>Technical Aspirant team</b>: general workshop + interview\n
-        
+        'cf-questions': `
 <b>Role Summary:\n</b>
-        <b>Technical team</b>: I want to join the technical team, and I have technical skills.\n
-        <b>Design/Creative team</b>: I want to join the design/creative team\n.
-        <b>Technical Aspirant team</b>: I want to join the technical team eventually, but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem)</b>.\n`,
-        'cf-label': "<b>Technical Aspirant</b>",
-        'value': 'Technical Aspirant'
+        <b>President</b>: Provide overall leadership and direction to the technical club, coordinating activities and fostering an inclusive environment.\n
+        <b>Head of Development</b>: Lead software projects, mentor members in programming skills, and stay updated on the latest technologies.\n
+        <b>Head of Competitive Coding</b>:Organize coding events, train members in problem-solving, and represent the club in coding competitions.\n
+        <b>Head of Research and Development</b>: Promote a culture of research, encourage innovative projects, and collaborate with faculty and industry experts.\n
+        <b>Secretary</b>: As the Secretary, you will be responsible for managing documentation and finances, ensuring the smooth administrative functioning of our technical club.\n`,
+        'cf-label': '<b>Head of Development</b>',
+        'value': 'Development'
       },
       {
         'tag': 'input',
         'type': 'radio',
         'name': 'roles',
-        'cf-questions': `<b>Recruitment process:\n</b>
-        <b>Technical team</b>: general workshop + technical workshop + interview\n
-        <b>Design/Creative team</b>: general workshop (optional) + task + interview\n
-        <b>Technical Aspirant team</b>: general workshop + interview\n
-        
+        'cf-questions': `
 <b>Role Summary:\n</b>
-        <b>Technical team</b>: I want to join the technical team, and I have technical skills.\n
-        <b>Design/Creative team</b>: I want to join the design/creative team.\n
-        <b>Technical Aspirant team</b>: I want to join the technical team eventually, but I do not have much technical skills currently <b>(ONLY FOR 1st and 3rd sem).</b>\n`,
-        'cf-label': "<b>Design/Creative team</b>",
-        'value': 'Design'
+        <b>President</b>: Provide overall leadership and direction to the technical club, coordinating activities and fostering an inclusive environment.\n
+        <b>Head of Development</b>: Lead software projects, mentor members in programming skills, and stay updated on the latest technologies.\n
+        <b>Head of Competitive Coding</b>:Organize coding events, train members in problem-solving, and represent the club in coding competitions.\n
+        <b>Head of Research and Development</b>: Promote a culture of research, encourage innovative projects, and collaborate with faculty and industry experts.\n
+        <b>Secretary</b>: As the Secretary, you will be responsible for managing documentation and finances, ensuring the smooth administrative functioning of our technical club.\n`,
+        'cf-label': '<b>Head of Competitive Coding</b>',
+        'value': 'CompetitiveCoding'
+      },
+      {
+        'tag': 'input',
+        'type': 'radio',
+        'name': 'roles',
+        'cf-questions': `
+<b>Role Summary:\n</b>
+        <b>President</b>: Provide overall leadership and direction to the technical club, coordinating activities and fostering an inclusive environment.\n
+        <b>Head of Development</b>: Lead software projects, mentor members in programming skills, and stay updated on the latest technologies.\n
+        <b>Head of Competitive Coding</b>:Organize coding events, train members in problem-solving, and represent the club in coding competitions.\n
+        <b>Head of Research and Development</b>: Promote a culture of research, encourage innovative projects, and collaborate with faculty and industry experts.\n
+        <b>Secretary</b>: As the Secretary, you will be responsible for managing documentation and finances, ensuring the smooth administrative functioning of our technical club.\n`,
+        'cf-label': '<b>Head of Research and Development</b>',
+        'value': 'RnD'
+      },
+      {
+        'tag': 'input',
+        'type': 'radio',
+        'name': 'roles',
+        'cf-questions': `
+<b>Role Summary:\n</b>
+        <b>President</b>: Provide overall leadership and direction to the technical club, coordinating activities and fostering an inclusive environment.\n
+        <b>Head of Development</b>: Lead software projects, mentor members in programming skills, and stay updated on the latest technologies.\n
+        <b>Head of Competitive Coding</b>:Organize coding events, train members in problem-solving, and represent the club in coding competitions.\n
+        <b>Head of Research and Development</b>: Promote a culture of research, encourage innovative projects, and collaborate with faculty and industry experts.\n
+        <b>Secretary</b>: As the Secretary, you will be responsible for managing documentation and finances, ensuring the smooth administrative functioning of our technical club.\n`,
+        'cf-label': '<b>Secretary</b>',
+        'value': 'Secretary'
       },
       {
         'tag': 'input',
@@ -110,7 +132,7 @@ export default class MyForm extends React.Component {
   
   async submitCallback() {
     var formDataSerialized = this.cf.getFormData(true);
-    const response = await fetch("https://api.codeio.club/register", {
+    const response = await fetch("http://localhost:8855/register", {
       method: "POST", 
       //mode: "cors", // no-cors, *cors, same-origin
       headers: {

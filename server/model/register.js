@@ -29,4 +29,4 @@ const RegisterSchema = new mongoose.Schema({
     ],
 });
 
-module.exports = mongoose.model("Registration",RegisterSchema,"registrations");
+module.exports = mongoose.model("SeniorCore",RegisterSchema,"seniorcore");

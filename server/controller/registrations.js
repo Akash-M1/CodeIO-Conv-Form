@@ -11,6 +11,15 @@ exports.getRegistrations = (req,res)=>{
 exports.register = async (req,res) =>{
     try {
         const data = await register.create(req.body);
+        if(data.roles == "Development"){
+            data.roles = "Head of Development"
+        }
+        else if(data.roles == "CompetitiveCoding"){
+            data.roles = "Head of Competitive Coding"
+        }
+        else if(data.roles == "RnD"){
+            data.roles = "Head of Research and Development"
+        }
         let job = queue.create('email',data).save(function(err){
             if(err){
                 console.log("Error in Job",err);
